@@ -1,6 +1,6 @@
 var jwt = require("jsonwebtoken");
 var mongoose = require("mongoose");
-var db = "mongodb://localhost/trooper";
+var db = "mongodb://eduardo.ing.udp@gmail.com:xxeduhxx22@ds023064.mlab.com:23064/heroku_x76mjpd2";
 mongoose.connect(db);
 
 //mis archivos
@@ -12,20 +12,6 @@ var key = require("../../functions/key").key();
 
 //pagina inicial
 exports.main = function (req, res) {
-
-    var indice = [
-        "<html>",
-        "<p>GET /usuarios = para mostrar todos los usuarios</p>",
-        "<p>GET /usuarios/id_del_usuario = para mostrar la info del usuario por id<br></p>",
-        "<p>POST /ingresar = pasar: user, nombre, apellidos, password, nivelmilitar, habilitado_para_usar_app<br></p>",
-        "<p>POST /ingresar2 = pasar: user, nombre, apellidos, password, nivelmilitar, habilitado_para_usar_app (se envia el mismo json, pero se trabaja diferente)</p>",
-        "<p>PUT /usuarios/id_del_usuario = pasar: user, nombre, apellidos, password, nivelmilitar, habilitado_para_usar_app</p>",
-        "<p>DELETE /usuarios/id_del_usuario = para borrar un usuario por id</p>",
-        "<p>DELETE /vaciar = para borrar a todos los usuarios</p>",
-        "<p>GET /usuarios/cuenta/cuenta_del_usuario = para mostrar la info del usuario por cuenta</p>",
-        "</html>"
-    ];
-
     res.statusCode = 200;
     res.setHeader('Contente-Type', 'text/plain');
     return res.status(200).send({ok: 'Cargado con éxito'}).end();
