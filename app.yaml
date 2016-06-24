@@ -1,0 +1,8 @@
+runtime: nodejs
+vm: true
+module: default
+threadsafe: true
+
+network:
+  forwarded_ports:
+    - 3000
